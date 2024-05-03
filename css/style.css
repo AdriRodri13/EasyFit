@@ -1,0 +1,168 @@
+:root {
+    --gris:#1f2425;
+    --blaco:#fffffe;
+    --negro:#000000;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    color: var(--);
+}
+
+
+a {
+    text-decoration: none;
+    font-family: "Bebas Neue";
+    font-size: 2.2em;
+}
+
+img {
+    width: 100%;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 6rem;
+    letter-spacing: 0.1em;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color:var(--gris) ;
+    padding: 3em;
+}
+
+.logo{
+    margin-left: 4em;
+}
+
+nav {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+
+nav a{
+    color: var(--blaco);
+}
+
+section{
+    padding: 20em;
+    background-image: linear-gradient(to top, rgb(255, 255, 255), rgba(255, 255, 255, 0)), url("../imagenes/Diseño sin título.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.introduccion__contenedor{
+    display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+}
+
+.introduccion__contenedor__texto{
+    color: var(--negro);
+    font-family: "anton";
+    text-align: left;
+    
+}
+
+.introduccion__contenedor__texto h1{
+    text-align: left;
+    font-style: italic;
+    color: var(--blaco);
+    margin:0.2em
+}
+
+.introduccion__contenedor__texto span{
+    -webkit-text-stroke: 1.0px #161B24;
+    
+}
+
+.introduccion__contenedor__texto p{
+    width: 80%;
+    font-size: 1.2em;
+    margin: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+.introduccion__contenedor__texto a{
+    background-color: #fced18;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 5em;
+    padding: 0.5em 1em;
+    
+}
+
+@media (max-width: 768px) {
+    .introduccion {
+        padding: 0;
+    }
+}
+
+
+.flecha{
+    width: 1.5em;
+    transform: rotate(180deg);
+    margin-left: 2em;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+.ipad__container {
+    position: relative; /* Hace que los elementos dentro de este contenedor se posicionen relativamente a él */
+    width: 50%;
+}
+
+.video__overlay {
+    position: absolute; /* Coloca el video encima de la imagen del iPad */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.video__overlay video {
+    z-index: -1;
+    object-position: 50% 100%;
+    position: absolute;
+    margin-top: 10%;
+    width: 80%;
+    height: 80%;
+}
