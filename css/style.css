@@ -115,7 +115,7 @@ section{
 }
 
 .introduccion__contenedor__texto a{
-    background-color: #fced18;
+    background-color: #fc1818;
     display: inline-flex;
     align-items: center;
     border-radius: 5em;
@@ -155,8 +155,9 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
+
+
 
 .video__overlay video {
     z-index: -1;
