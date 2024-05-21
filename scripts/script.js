@@ -21,3 +21,5 @@ var kinet = new Kinet({
     kinet.animate('x', event.clientX - window.innerWidth/2);
     kinet.animate('y', event.clientY - window.innerHeight/2);
   });
+
+  

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <meta name="description" content="Somos EasyFit, lo mejor del mundo del deporte">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -17,6 +16,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/button.css">
     <link rel="stylesheet" href="css/carousel.css">
+    <script src="scripts/script.js"></script>
     <title>EasyFit</title>
 </head>
 
@@ -24,7 +24,9 @@
 
     <header>
         <div class="logo">
-            <img src="imagenes/Copia de EASY/logoSinFondoç.png" alt="Logo Easy Fit">
+            <div class="logo__container">
+                <img src="imagenes/Copia de EASY/logoSinFondoç.png" alt="Logo Easy Fit">
+            </div> 
         </div>
         <nav>
             <a href="#">Inicio</a>
@@ -163,56 +165,56 @@
     <h2>Una forma <span>moderna</span> de hacer deporte</h2>
 
     <main>
-        <div class="ipad__container">
-            <img src="imagenes/pngwing.com.png" alt="iPad">
-            <div class="video__overlay">
-                <video controls>
-                    <source src="ruta_a_tu_video.mp4" type="video/mp4">
-                    Tu navegador no soporta el elemento de video.
-                </video>
+        
+            <div class="ipad__container">
+                <img src="imagenes/pngwing.com.png" alt="iPad">
+                <div class="video__overlay">
+                    <video controls>
+                        <source src="imagenes/1035271574-preview.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                </div>
             </div>
-        </div>
+       
     </main>
 
     <h2 class="programas__titulo">Nuestros Programas</h2>
 
     <section class="programas">
-        <img src="imagenes/Diseño sin título.png" alt="">
-        <div class="programas__texto">
-            <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Non nesciunt vel soluta a aspernatur est fugit enim quos. Reprehenderit, 
-                doloribus. Quasi nulla veritatis fugiat impedit sint rerum quae aperiam magni.</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Non nesciunt vel soluta a aspernatur est fugit enim quos. Reprehenderit, 
-                doloribus. Quasi nulla veritatis fugiat impedit sint rerum quae aperiam magni.
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Non nesciunt vel soluta a aspernatur est fugit enim quos. Reprehenderit, 
-                doloribus. Quasi nulla veritatis fugiat impedit sint rerum quae aperiam magni.</p>
+        <div class="programas__contenedor">
+            <div class="programas__tarjetas ">
+                <img src="imagenes/Diseño sin título.png" alt="">
+            </div>
+            <div class="programas__tarjetas ">
+                <div class="programas__texto">
+                    <h3>Lorem, ipsum dolor sit amet </h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                        Non nesciunt vel soluta a aspernatur est fugit enim quos. Reprehenderit,</p>
+                </div>
+            </div>
+            <div class="programas__tarjetas ">
+                <div class="programas__texto">
+                    <h3>Lorem, ipsum dolor sit amet </h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                        Non nesciunt vel soluta a aspernatur est fugit enim quos. Reprehenderit,</p>
+                </div>
+            </div>
+            <div class="programas__tarjetas ">
+                <img src="imagenes/Diseño sin título.png" alt="">
+            </div>
+            <div class="programas__tarjetas ">
+                <img src="imagenes/Diseño sin título.png" alt="">
+            </div>
+            <div class="programas__tarjetas ">
+                <div class="programas__texto">
+                    <h3>Lorem, ipsum dolor sit amet </h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                        Non nesciunt vel soluta a aspernatur est fugit enim quos. Reprehenderit,</p>
+                </div>
+            </div>
         </div>
-        <div class="programas__texto">
-            <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Non nesciunt vel soluta a aspernatur est fugit enim quos. Reprehenderit, 
-                doloribus. Quasi nulla veritatis fugiat impedit sint rerum quae aperiam magni.</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Non nesciunt vel soluta a aspernatur est fugit enim quos. Reprehenderit, 
-                doloribus. Quasi nulla veritatis fugiat impedit sint rerum quae aperiam magni.
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Non nesciunt vel soluta a aspernatur est fugit enim quos. Reprehenderit, 
-                doloribus. Quasi nulla veritatis fugiat impedit sint rerum quae aperiam magni.</p>
-        </div>
-        <img src="imagenes/Diseño sin título.png" alt="">
-        <img src="imagenes/Diseño sin título.png" alt="">
-        <div class="programas__texto">
-            <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Non nesciunt vel soluta a aspernatur est fugit enim quos. Reprehenderit, 
-                doloribus. Quasi nulla veritatis fugiat impedit sint rerum quae aperiam magni.</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Non nesciunt vel soluta a aspernatur est fugit enim quos. Reprehenderit, 
-                doloribus. Quasi nulla veritatis fugiat impedit sint rerum quae aperiam magni.
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Non nesciunt vel soluta a aspernatur est fugit enim quos. Reprehenderit, 
-                doloribus. Quasi nulla veritatis fugiat impedit sint rerum quae aperiam magni.</p>
-        </div>
+        
+
     </section>
 
     <section class="servicios">
@@ -287,12 +289,23 @@
 
     <section class="contacto">
         <div class="contacto__boton">
-            <a href="https://api.whatsapp.com/send?phone=640639032&text=Buenas,%20estoy%20interesado%20en%20uno%20de%20los%20programas" target="_blank">Contactar</a>
+            <a href="https://api.whatsapp.com/send?phone=640639032&text=Buenas,%20estoy%20interesado%20en%20uno%20de%20los%20programas" target="_blank"><p>contactar</p> <img src="imagenes/imagenes_logos/whatsapp.png" alt=""></a>
         </div> 
     </section>
 
     <footer>
-
+        <div class="footer__redes">
+            <p>Nuestras redes sociales</p>
+            <div class="redes__enlaces">
+                <a href="#"><img src="imagenes/imagenes_logos/instagram (1).png" alt=""></a>
+                <a href="#"><img src="imagenes/imagenes_logos/tik-tok.png" alt=""></a>
+                <a href="#"><img src="imagenes/imagenes_logos/linkedin.png" alt=""></a>
+            </div>
+        </div>
+        <div class="footer__otros">
+            <img src="imagenes/Copia de EASY/logoSinFondoç.png" alt="">
+        </div>
+    
     </footer>
 
 

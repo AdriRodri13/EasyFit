@@ -46,7 +46,7 @@ h3 {
 }
 
 h1 {
-    font-size: 6rem;
+    font-size: 8rem;
     letter-spacing: 0.1em;
 }
 
@@ -68,7 +68,13 @@ header{
 
 .logo{
     margin-left: 4em;
-    width: 10em;
+    width: 15em;
+    background-color: white;
+    border-radius: 10em;
+}
+
+.logo__container{
+    padding: 2em;
 }
 
 nav {
@@ -81,6 +87,15 @@ nav {
 nav a{
     color: var(--blaco);
     font-size: 4.5em;
+    padding: 0.3em;
+    border-radius: 0.3em;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav a:hover{
+    color: var(--azul);
+    background-color: white;
+    
 }
 
 .introduccion{
@@ -116,17 +131,18 @@ nav a{
 
 .introduccion__contenedor__texto p{
     width: 80%;
-    font-size: 1.2em;
+    font-size: 2em;
     margin: 0.5em;
     margin-bottom: 1.5em;
 }
 
 .introduccion__contenedor__texto a{
-    background-color: #fc1818;
+    background-color: #0097B2;
     display: inline-flex;
     align-items: center;
     border-radius: 5em;
     padding: 0.5em 1em;
+    font-size: 3em;
     
 }
 
@@ -134,10 +150,23 @@ nav a{
     header{
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
+    nav {
+        display: flex;
+        width: 50%;
+        justify-content: center;
+        
+    }
+
+    .logo{
+        margin-left: 0em;
+    }
+    
+
     a{
-        margin: 0.5em;
+        margin: 0.2em;
     }
 
     .introduccion {
@@ -160,6 +189,8 @@ main{
 .ipad__container {
     position: relative; /* Hace que los elementos dentro de este contenedor se posicionen relativamente a él */
     width: 50%;
+    background-color: black; /* Establece el fondo del video en negro */ /* Ajusta la opacidad del fondo negro según sea necesario */
+    z-index: 0; /* Asegura que el fondo negro esté detrás de la imagen del iPad */
 }
 
 .video__overlay {
@@ -171,32 +202,105 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 
-
 .video__overlay video {
-    z-index: -1;
+    z-index: 0;
     object-position: 50% 100%;
     position: absolute;
     margin-top: 10%;
     width: 80%;
     height: 80%;
+    
+}
+
+@media (max-width: 768px) {
+   .ipad__container{
+    width: 100%;
+   }
 }
 
 .programas__titulo{
     background-color: var(--azul);
+    padding: 3em;
+    margin-top: 2em;
+    background-image: linear-gradient(to top, var(--azul) 70%, white);
+    
 }
+
 
 .programas{
     background-color:var(--azul) ;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    border-bottom: solid 4px #002fb2;
+    
 }
 
+.programas__contenedor{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 5em;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.programas h3{
+    font-size: 5em;
+}
+
+.programas p{
+    font-size: 3em;
+}
+
+.programas img{
+    width: 60em;
+    height: 40em;
+    border-radius: 5em;
+    box-shadow: 3px 3px 10px black;
+}
+
+.programas__tarjetas{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    view-timeline-name: --image;
+    view-timeline-name: block;
+
+    animation-timeline: --image;
+    animation-name: show;
+
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+
+@keyframes show{
+    from{
+        opacity: 0;
+        scale: 25%;
+    }
+
+    to{
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+
+
 @media (max-width: 768px) {
-    .programas {
+    .programas__contenedor {
         grid-template-columns: repeat(1, 1fr);
+    }
+    .programas__tarjetas{
+        margin-top: 5em;
+    }
+    .programas  img{
+        width: 40em;
+        height: 30em;
     }
 }
 
@@ -224,8 +328,9 @@ main{
 }
 
 ul img{
-    max-width: 3em;
-    height: auto;
+    width: 3em;
+
+    height: 3em;
     margin: 1em;
 }
 
@@ -254,9 +359,64 @@ li{
 }
 
 .contacto__boton{
-    background-color: lawngreen;
+    background-color: 	#25d366;
     padding: 2em;
     padding-right: 3em;
     padding-left: 3em;
     border-radius: 2em;
+}
+
+.contacto__boton img{
+    width: 2em;
+}
+
+.contacto__boton a{
+    display: flex;
+    color: #128c7e;
+}
+
+.contacto__boton p{
+    font-size: 2em;
+    margin-right: 0.4em;
+}
+
+
+footer{
+    display: flex;
+    flex-direction:row ;
+    justify-content:space-evenly;
+}
+
+.footer__redes{
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+}
+
+.redes__enlaces{
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.redes__enlaces img{
+    width: 4em;
+    margin-right: 2em;
+}
+
+
+@media (max-width: 768px) {
+    footer{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    footer div{
+        margin-top: 5em;
+    }
+
+    .redes__enlaces img{
+        margin-right: 0em;
+    }
 }
